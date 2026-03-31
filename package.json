@@ -1,0 +1,23 @@
+{
+  "name": "dynamicwebdev",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Rohit1mag/dynamicwebdev#readme",
+  "bugs": {
+    "url": "https://github.com/Rohit1mag/dynamicwebdev/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rohit1mag/dynamicwebdev.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
