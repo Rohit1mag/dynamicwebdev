@@ -1,8 +1,28 @@
+/* body font is Inter from google fonts */
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   margin: 20px;
+}
+
+/* headings use Playfair Display (the display font) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 22px;
+  color: var(--color-accent);
+  border-bottom: 1px solid var(--color-border);
 }
 
 header {
@@ -16,17 +36,12 @@ header h1 {
 }
 
 nav.breadcrumb {
-  font-size: 0.9rem;
+  font-size: 14px;
   margin-bottom: 10px;
 }
 
 nav.breadcrumb a {
   color: var(--color-link);
-}
-
-h2 {
-  color: var(--color-accent);
-  border-bottom: 1px solid var(--color-border);
 }
 
 a {
@@ -45,4 +60,13 @@ dt {
 
 dd {
   margin-bottom: 5px;
+}
+
+/* icon styles - from lab instructions */
+svg.icon {
+  display: inline;
+  height: 2em;
+  width: 2em;
+  vertical-align: top;
+  fill: currentColor;
 }
