@@ -6,54 +6,89 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/reset.css" />
   <link rel="stylesheet" href="/styles/tokens.css" />
   <link rel="stylesheet" href="/styles/page.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
 </head>
 <body>
-  <header>
-    <h1>Apple Inc. (AAPL)</h1>
+  <header class="site-header">
+    <div class="site-header__brand">
+      <a class="site-logo" href="index.html">Investment Tracker</a>
+      <span class="site-header__sep">/</span>
+      <span class="site-header__page">Apple Inc. (AAPL)</span>
+    </div>
+    <nav class="site-header__nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="investor-rohit.html">Investors</a>
+      <a href="portfolio-growth.html">Portfolios</a>
+      <a href="asset-aapl.html">Assets</a>
+    </nav>
+    <div class="site-header__user">
+      <span class="site-header__name">Alex M.</span>
+      <span class="avatar" title="demo account">AM</span>
+    </div>
   </header>
-  <nav class="breadcrumb">
-    <a href="index.html">home</a> &gt; aapl
-  </nav>
 
+  <div class="page-shell">
+    <aside class="sidebar" aria-label="Quick links">
+      <p class="sidebar__title">Jump to (home page)</p>
+      <ul class="sidebar__list">
+        <li><a href="index.html#investors">Investors</a></li>
+        <li><a href="index.html#portfolios">Portfolios</a></li>
+        <li><a href="index.html#assets">Assets</a></li>
+        <li><a href="index.html#markets">Markets</a></li>
+        <li><a href="index.html#returns">Returns</a></li>
+        <li><a href="index.html#risks">Risks</a></li>
+      </ul>
+      <p class="sidebar__sub"><a href="index.html">← full list</a></p>
+    </aside>
 
-  <p>stock. tech company</p>
+    <div class="page-shell__main">
+      <main class="content">
+        <nav class="breadcrumb">
+          <a href="index.html">home</a> &gt; aapl
+        </nav>
 
-  <h2>stuff</h2>
-  <dl>
-    <dt>ticker</dt>         <dd>AAPL</dd>
-    <dt>type</dt>           <dd>stock</dd>
-    <dt>sector</dt>         <dd>technology</dd>
-    <dt>price (fake data)</dt><dd>189.30</dd>
-    <dt>52w high</dt>       <dd>198.23</dd>
-    <dt>52w low</dt>        <dd>124.17</dd>
-    <dt>market cap</dt>     <dd>~3 trillion</dd>
-    <dt>P/E</dt>            <dd>30.2</dd>
-    <dt>div yield</dt>      <dd>0.50%</dd>
-    <dt>div annual</dt>     <dd>$0.96/share</dd>
-  </dl>
+        <p>stock. tech company</p>
 
-  <h2>traded on (market)</h2>
-  <ul>
-    <li><a href="market-nasdaq.html">NASDAQ</a></li>
-  </ul>
+        <h2>stuff</h2>
+        <dl>
+          <dt>ticker</dt>         <dd>AAPL</dd>
+          <dt>type</dt>           <dd>stock</dd>
+          <dt>sector</dt>         <dd>technology</dd>
+          <dt>price (fake data)</dt><dd>189.30</dd>
+          <dt>52w high</dt>       <dd>198.23</dd>
+          <dt>52w low</dt>        <dd>124.17</dd>
+          <dt>market cap</dt>     <dd>~3 trillion</dd>
+          <dt>P/E</dt>            <dd>30.2</dd>
+          <dt>div yield</dt>      <dd>0.50%</dd>
+          <dt>div annual</dt>     <dd>$0.96/share</dd>
+        </dl>
 
-  <h2>return</h2>
-  <ul>
-    <li><a href="return-aapl.html">2023 return page</a></li>
-  </ul>
+        <h2>traded on (market)</h2>
+        <ul>
+          <li><a href="market-nasdaq.html">NASDAQ</a></li>
+        </ul>
 
-  <h2>risk</h2>
-  <ul>
-    <li><a href="risk-aapl.html">risk page</a></li>
-  </ul>
+        <h2>return</h2>
+        <ul>
+          <li><a href="return-aapl.html">2023 return page</a></li>
+        </ul>
 
-  <h2>in portfolios</h2>
-  <ul>
-    <li><a href="portfolio-growth.html">growth portfolio</a> - 60 shares</li>
-    <li><a href="portfolio-income.html">income portfolio</a> - 20 shares</li>
-  </ul>
+        <h2>risk</h2>
+        <ul>
+          <li><a href="risk-aapl.html">risk page</a></li>
+        </ul>
+
+        <h2>in portfolios</h2>
+        <ul>
+          <li><a href="portfolio-growth.html">growth portfolio</a> - 60 shares</li>
+          <li><a href="portfolio-income.html">income portfolio</a> - 20 shares</li>
+        </ul>
+      </main>
+    </div>
+  </div>
 
 </body>
 </html>

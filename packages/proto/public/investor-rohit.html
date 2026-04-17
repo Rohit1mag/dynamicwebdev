@@ -6,36 +6,71 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/reset.css" />
   <link rel="stylesheet" href="/styles/tokens.css" />
   <link rel="stylesheet" href="/styles/page.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
 </head>
 <body>
-  <header>
-    <h1>Investor: Rohit</h1>
+  <header class="site-header">
+    <div class="site-header__brand">
+      <a class="site-logo" href="index.html">Investment Tracker</a>
+      <span class="site-header__sep">/</span>
+      <span class="site-header__page">Investor: Rohit</span>
+    </div>
+    <nav class="site-header__nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="investor-rohit.html">Investors</a>
+      <a href="portfolio-growth.html">Portfolios</a>
+      <a href="asset-aapl.html">Assets</a>
+    </nav>
+    <div class="site-header__user">
+      <span class="site-header__name">Alex M.</span>
+      <span class="avatar" title="demo account">AM</span>
+    </div>
   </header>
-  <nav class="breadcrumb">
-    <a href="index.html">home</a> &gt; rohit
-  </nav>
 
+  <div class="page-shell">
+    <aside class="sidebar" aria-label="Quick links">
+      <p class="sidebar__title">Jump to (home page)</p>
+      <ul class="sidebar__list">
+        <li><a href="index.html#investors">Investors</a></li>
+        <li><a href="index.html#portfolios">Portfolios</a></li>
+        <li><a href="index.html#assets">Assets</a></li>
+        <li><a href="index.html#markets">Markets</a></li>
+        <li><a href="index.html#returns">Returns</a></li>
+        <li><a href="index.html#risks">Risks</a></li>
+      </ul>
+      <p class="sidebar__sub"><a href="index.html">← full list</a></p>
+    </aside>
 
-  <p>growth investor, long time horizon</p>
+    <div class="page-shell__main">
+      <main class="content">
+        <nav class="breadcrumb">
+          <a href="index.html">home</a> &gt; rohit
+        </nav>
 
-  <h2>profile</h2>
-  <dl>
-    <dt>full name</dt>     <dd>Rohit Kota</dd>
-    <dt>age</dt>           <dd>38</dd>
-    <dt>job</dt>           <dd>Software Engineer</dd>
-    <dt>risk tolerance</dt>  <dd>high</dd>
-    <dt>horizon</dt>       <dd>15 years</dd>
-    <dt>income</dt>        <dd>$145,000</dd>
-    <dt>net worth</dt>     <dd>$520k approx</dd>
-    <dt>member since</dt>    <dd>2015</dd>
-  </dl>
+        <p>growth investor, long time horizon</p>
 
-  <h2>portfolios (manages)</h2>
-  <ul>
-    <li><a href="portfolio-growth.html">Aggressive Growth Portfolio</a></li>
-  </ul>
+        <h2>profile</h2>
+        <dl>
+          <dt>full name</dt>     <dd>Rohit Kota</dd>
+          <dt>age</dt>           <dd>38</dd>
+          <dt>job</dt>           <dd>Software Engineer</dd>
+          <dt>risk tolerance</dt>  <dd>high</dd>
+          <dt>horizon</dt>       <dd>15 years</dd>
+          <dt>income</dt>        <dd>$145,000</dd>
+          <dt>net worth</dt>     <dd>$520k approx</dd>
+          <dt>member since</dt>    <dd>2015</dd>
+        </dl>
+
+        <h2>portfolios (manages)</h2>
+        <ul>
+          <li><a href="portfolio-growth.html">Aggressive Growth Portfolio</a></li>
+        </ul>
+      </main>
+    </div>
+  </div>
 
 </body>
 </html>

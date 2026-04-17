@@ -1,14 +1,13 @@
-/* body font is Inter from google fonts */
+/* fonts + colors — lab 4 stuff */
+
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: 'Inter', Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.6;
-  margin: 20px;
+  line-height: 1.55;
 }
 
-/* headings use Playfair Display (the display font) */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: bold;
@@ -25,23 +24,21 @@ h2 {
   border-bottom: 1px solid var(--color-border);
 }
 
-header {
+.site-header {
   background-color: var(--color-header-bg);
   color: var(--color-header-text);
-  padding: 10px 20px;
-}
-
-header h1 {
-  margin: 0;
 }
 
 nav.breadcrumb {
   font-size: 14px;
-  margin-bottom: 10px;
 }
 
 nav.breadcrumb a {
   color: var(--color-link);
+}
+
+.site-header a {
+  color: inherit;
 }
 
 a {
@@ -51,15 +48,10 @@ a {
 dl {
   background-color: var(--color-card-bg);
   border: 1px solid var(--color-border);
-  padding: 10px;
 }
 
 dt {
   font-weight: bold;
-}
-
-dd {
-  margin-bottom: 5px;
 }
 
 /* icon styles - from lab instructions */

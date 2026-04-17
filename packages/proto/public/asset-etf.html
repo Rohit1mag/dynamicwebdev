@@ -6,48 +6,83 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/reset.css" />
   <link rel="stylesheet" href="/styles/tokens.css" />
   <link rel="stylesheet" href="/styles/page.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
 </head>
 <body>
-  <header>
-    <h1>Vanguard S&amp;P 500 ETF (VOO)</h1>
+  <header class="site-header">
+    <div class="site-header__brand">
+      <a class="site-logo" href="index.html">Investment Tracker</a>
+      <span class="site-header__sep">/</span>
+      <span class="site-header__page">Vanguard S&amp;P 500 ETF (VOO)</span>
+    </div>
+    <nav class="site-header__nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="investor-rohit.html">Investors</a>
+      <a href="portfolio-growth.html">Portfolios</a>
+      <a href="asset-aapl.html">Assets</a>
+    </nav>
+    <div class="site-header__user">
+      <span class="site-header__name">Alex M.</span>
+      <span class="avatar" title="demo account">AM</span>
+    </div>
   </header>
-  <nav class="breadcrumb">
-    <a href="index.html">home</a> &gt; voo
-  </nav>
 
+  <div class="page-shell">
+    <aside class="sidebar" aria-label="Quick links">
+      <p class="sidebar__title">Jump to (home page)</p>
+      <ul class="sidebar__list">
+        <li><a href="index.html#investors">Investors</a></li>
+        <li><a href="index.html#portfolios">Portfolios</a></li>
+        <li><a href="index.html#assets">Assets</a></li>
+        <li><a href="index.html#markets">Markets</a></li>
+        <li><a href="index.html#returns">Returns</a></li>
+        <li><a href="index.html#risks">Risks</a></li>
+      </ul>
+      <p class="sidebar__sub"><a href="index.html">← full list</a></p>
+    </aside>
 
-  <p>ETF that follows S&amp;P 500</p>
+    <div class="page-shell__main">
+      <main class="content">
+        <nav class="breadcrumb">
+          <a href="index.html">home</a> &gt; voo
+        </nav>
 
-  <h2>stuff</h2>
-  <dl>
-    <dt>ticker</dt>      <dd>VOO</dd>
-    <dt>type</dt>        <dd>ETF</dd>
-    <dt>index</dt>       <dd>S&amp;P 500</dd>
-    <dt>price</dt>       <dd>428.10</dd>
-    <dt>52w high</dt>    <dd>439.96</dd>
-    <dt>52w low</dt>     <dd>338.87</dd>
-    <dt>expense ratio</dt> <dd>0.03%</dd>
-    <dt>AUM</dt>         <dd>$860B (made up)</dd>
-    <dt>div yield</dt>     <dd>1.52%</dd>
-    <dt># holdings</dt>    <dd>503</dd>
-  </dl>
+        <p>ETF that follows S&amp;P 500</p>
 
-  <h2>traded on</h2>
-  <ul>
-    <li><a href="market-nyse.html">NYSE Arca</a></li>
-  </ul>
+        <h2>stuff</h2>
+        <dl>
+          <dt>ticker</dt>      <dd>VOO</dd>
+          <dt>type</dt>        <dd>ETF</dd>
+          <dt>index</dt>       <dd>S&amp;P 500</dd>
+          <dt>price</dt>       <dd>428.10</dd>
+          <dt>52w high</dt>    <dd>439.96</dd>
+          <dt>52w low</dt>     <dd>338.87</dd>
+          <dt>expense ratio</dt> <dd>0.03%</dd>
+          <dt>AUM</dt>         <dd>$860B (made up)</dd>
+          <dt>div yield</dt>     <dd>1.52%</dd>
+          <dt># holdings</dt>    <dd>503</dd>
+        </dl>
 
-  <h2>return</h2>
-  <ul>
-    <li><a href="return-etf.html">2023 return</a></li>
-  </ul>
+        <h2>traded on</h2>
+        <ul>
+          <li><a href="market-nyse.html">NYSE Arca</a></li>
+        </ul>
 
-  <h2>in portfolios</h2>
-  <ul>
-    <li><a href="portfolio-growth.html">growth</a> - 45 sh</li>
-  </ul>
+        <h2>return</h2>
+        <ul>
+          <li><a href="return-etf.html">2023 return</a></li>
+        </ul>
+
+        <h2>in portfolios</h2>
+        <ul>
+          <li><a href="portfolio-growth.html">growth</a> - 45 sh</li>
+        </ul>
+      </main>
+    </div>
+  </div>
 
 </body>
 </html>
