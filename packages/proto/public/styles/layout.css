@@ -1,11 +1,8 @@
-/* layout-only rules — typography/colors stay in page.css */
-
 body {
   min-height: 100vh;
   padding: var(--space-3);
 }
 
-/* ---- header: flex row ---- */
 .site-header {
   display: flex;
   flex-wrap: wrap;
@@ -91,7 +88,6 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.45);
 }
 
-/* ---- main shell: sidebar + content on a 12-col track ---- */
 .page-shell {
   display: grid;
   grid-template-columns: var(--sidebar-width) 1fr;
@@ -105,7 +101,6 @@ body {
   min-width: 0;
 }
 
-/* inner grid lines up with “12 columns” idea */
 .page-shell__main .content {
   display: grid;
   grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
@@ -117,7 +112,6 @@ body {
   grid-column: 1 / -1;
 }
 
-/* home page: cards sit on the 12-col grid */
 .section-grid {
   display: grid;
   grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
@@ -150,7 +144,6 @@ body {
   max-width: 52ch;
 }
 
-/* definition lists: small grid so rows line up */
 .content dl {
   display: grid;
   grid-template-columns: minmax(7rem, 10rem) 1fr;
@@ -168,7 +161,6 @@ body {
   margin: 0;
 }
 
-/* lists in main column — even vertical rhythm */
 .content > ul {
   display: flex;
   flex-direction: column;
@@ -180,7 +172,6 @@ body {
   margin-top: 0;
 }
 
-/* sidebar */
 .sidebar {
   position: sticky;
   top: var(--space-3);
@@ -222,14 +213,12 @@ body {
   color: #444;
 }
 
-/* breadcrumb row */
 .breadcrumb {
   grid-column: 1 / -1;
   padding: var(--space-2) 0;
   margin-bottom: 0;
 }
 
-/* ---- responsive: fewer columns on smaller screens ---- */
 @media (max-width: 960px) {
   :root {
     --grid-columns: 8;
@@ -266,7 +255,6 @@ body {
   }
 }
 
-/* big monitors: a bit more room (lab note about wide screens) */
 @media (min-width: 1400px) {
   .page-shell {
     max-width: var(--layout-wide);
