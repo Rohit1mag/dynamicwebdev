@@ -1,5 +1,3 @@
-/* fonts + colors — lab 4 stuff */
-
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -54,7 +52,6 @@ dt {
   font-weight: bold;
 }
 
-/* icon styles - from lab instructions */
 svg.icon {
   display: inline;
   height: 2em;
