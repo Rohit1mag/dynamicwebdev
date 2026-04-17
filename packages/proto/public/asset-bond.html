@@ -6,43 +6,78 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/reset.css" />
   <link rel="stylesheet" href="/styles/tokens.css" />
   <link rel="stylesheet" href="/styles/page.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
 </head>
 <body>
-  <header>
-    <h1>US Treasury Bond (10 year)</h1>
+  <header class="site-header">
+    <div class="site-header__brand">
+      <a class="site-logo" href="index.html">Investment Tracker</a>
+      <span class="site-header__sep">/</span>
+      <span class="site-header__page">US Treasury Bond (10 year)</span>
+    </div>
+    <nav class="site-header__nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="investor-rohit.html">Investors</a>
+      <a href="portfolio-growth.html">Portfolios</a>
+      <a href="asset-aapl.html">Assets</a>
+    </nav>
+    <div class="site-header__user">
+      <span class="site-header__name">Alex M.</span>
+      <span class="avatar" title="demo account">AM</span>
+    </div>
   </header>
-  <nav class="breadcrumb">
-    <a href="index.html">home</a> &gt; treasury bond
-  </nav>
 
+  <div class="page-shell">
+    <aside class="sidebar" aria-label="Quick links">
+      <p class="sidebar__title">Jump to (home page)</p>
+      <ul class="sidebar__list">
+        <li><a href="index.html#investors">Investors</a></li>
+        <li><a href="index.html#portfolios">Portfolios</a></li>
+        <li><a href="index.html#assets">Assets</a></li>
+        <li><a href="index.html#markets">Markets</a></li>
+        <li><a href="index.html#returns">Returns</a></li>
+        <li><a href="index.html#risks">Risks</a></li>
+      </ul>
+      <p class="sidebar__sub"><a href="index.html">← full list</a></p>
+    </aside>
 
-  <p>bond. government debt</p>
+    <div class="page-shell__main">
+      <main class="content">
+        <nav class="breadcrumb">
+          <a href="index.html">home</a> &gt; treasury bond
+        </nav>
 
-  <h2>stuff</h2>
-  <dl>
-    <dt>issuer</dt>      <dd>US treasury</dd>
-    <dt>type</dt>        <dd>gov bond</dd>
-    <dt>CUSIP</dt>       <dd>912828Z29 (example)</dd>
-    <dt>face</dt>        <dd>1000 per bond</dd>
-    <dt>coupon</dt>      <dd>4.25%</dd>
-    <dt>coupon pay</dt>    <dd>2x per year</dd>
-    <dt>maturity</dt>    <dd>Nov 15 2033</dd>
-    <dt>current yield</dt> <dd>4.48%</dd>
-    <dt>rating</dt>      <dd>AA+</dd>
-    <dt>where traded</dt>  <dd>OTC etc</dd>
-  </dl>
+        <p>bond. government debt</p>
 
-  <h2>risk</h2>
-  <ul>
-    <li><a href="risk-bond.html">bond risk page</a></li>
-  </ul>
+        <h2>stuff</h2>
+        <dl>
+          <dt>issuer</dt>      <dd>US treasury</dd>
+          <dt>type</dt>        <dd>gov bond</dd>
+          <dt>CUSIP</dt>       <dd>912828Z29 (example)</dd>
+          <dt>face</dt>        <dd>1000 per bond</dd>
+          <dt>coupon</dt>      <dd>4.25%</dd>
+          <dt>coupon pay</dt>    <dd>2x per year</dd>
+          <dt>maturity</dt>    <dd>Nov 15 2033</dd>
+          <dt>current yield</dt> <dd>4.48%</dd>
+          <dt>rating</dt>      <dd>AA+</dd>
+          <dt>where traded</dt>  <dd>OTC etc</dd>
+        </dl>
 
-  <h2>in portfolios</h2>
-  <ul>
-    <li><a href="portfolio-income.html">income portfolio</a> - 400k face</li>
-  </ul>
+        <h2>risk</h2>
+        <ul>
+          <li><a href="risk-bond.html">bond risk page</a></li>
+        </ul>
+
+        <h2>in portfolios</h2>
+        <ul>
+          <li><a href="portfolio-income.html">income portfolio</a> - 400k face</li>
+        </ul>
+      </main>
+    </div>
+  </div>
 
 </body>
 </html>

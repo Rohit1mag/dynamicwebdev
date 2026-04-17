@@ -6,40 +6,75 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/reset.css" />
   <link rel="stylesheet" href="/styles/tokens.css" />
   <link rel="stylesheet" href="/styles/page.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
 </head>
 <body>
-  <header>
-    <h1>Aggressive Growth Portfolio</h1>
+  <header class="site-header">
+    <div class="site-header__brand">
+      <a class="site-logo" href="index.html">Investment Tracker</a>
+      <span class="site-header__sep">/</span>
+      <span class="site-header__page">Aggressive Growth Portfolio</span>
+    </div>
+    <nav class="site-header__nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="investor-rohit.html">Investors</a>
+      <a href="portfolio-growth.html">Portfolios</a>
+      <a href="asset-aapl.html">Assets</a>
+    </nav>
+    <div class="site-header__user">
+      <span class="site-header__name">Alex M.</span>
+      <span class="avatar" title="demo account">AM</span>
+    </div>
   </header>
-  <nav class="breadcrumb">
-    <a href="index.html">home</a> &gt; <a href="investor-rohit.html">rohit</a> &gt; growth portfolio
-  </nav>
 
+  <div class="page-shell">
+    <aside class="sidebar" aria-label="Quick links">
+      <p class="sidebar__title">Jump to (home page)</p>
+      <ul class="sidebar__list">
+        <li><a href="index.html#investors">Investors</a></li>
+        <li><a href="index.html#portfolios">Portfolios</a></li>
+        <li><a href="index.html#assets">Assets</a></li>
+        <li><a href="index.html#markets">Markets</a></li>
+        <li><a href="index.html#returns">Returns</a></li>
+        <li><a href="index.html#risks">Risks</a></li>
+      </ul>
+      <p class="sidebar__sub"><a href="index.html">← full list</a></p>
+    </aside>
 
-  <p>high risk type portfolio for long term growth. tag: growth</p>
+    <div class="page-shell__main">
+      <main class="content">
+        <nav class="breadcrumb">
+          <a href="index.html">home</a> &gt; <a href="investor-rohit.html">rohit</a> &gt; growth portfolio
+        </nav>
 
-  <h2>details</h2>
-  <dl>
-    <dt>id</dt>        <dd>PF-001</dd>
-    <dt>created</dt>     <dd>March 12, 2018</dd>
-    <dt>value</dt>     <dd>$284500</dd>
-    <dt>YTD return</dt>  <dd>+18.4%</dd>
-    <dt>benchmark</dt>   <dd>S&amp;P 500</dd>
-    <dt>rebalance</dt>   <dd>quarterly</dd>
-  </dl>
+        <p>high risk type portfolio for long term growth. tag: growth</p>
 
-  <h2>managed by</h2>
-  <ul>
-    <li><a href="investor-rohit.html">Rohit</a></li>
-  </ul>
+        <h2>details</h2>
+        <dl>
+          <dt>id</dt>        <dd>PF-001</dd>
+          <dt>created</dt>     <dd>March 12, 2018</dd>
+          <dt>value</dt>     <dd>$284500</dd>
+          <dt>YTD return</dt>  <dd>+18.4%</dd>
+          <dt>benchmark</dt>   <dd>S&amp;P 500</dd>
+          <dt>rebalance</dt>   <dd>quarterly</dd>
+        </dl>
 
-  <h2>assets</h2>
-  <ul>
-    <li><a href="asset-aapl.html">Apple (AAPL)</a> - 60 sh @ 189.30</li>
-    <li><a href="asset-etf.html">VOO</a> - 45 sh @ 428.10</li>
-  </ul>
+        <h2>managed by</h2>
+        <ul>
+          <li><a href="investor-rohit.html">Rohit</a></li>
+        </ul>
+
+        <h2>assets</h2>
+        <ul>
+          <li><a href="asset-aapl.html">Apple (AAPL)</a> - 60 sh @ 189.30</li>
+          <li><a href="asset-etf.html">VOO</a> - 45 sh @ 428.10</li>
+        </ul>
+      </main>
+    </div>
+  </div>
 
 </body>
 </html>

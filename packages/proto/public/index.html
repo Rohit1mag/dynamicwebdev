@@ -3,80 +3,122 @@
 <head>
   <meta charset="utf-8" />
   <title>Investment Tracker</title>
-  <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/reset.css" />
   <link rel="stylesheet" href="/styles/tokens.css" />
   <link rel="stylesheet" href="/styles/page.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
 </head>
 <body>
-  <header>
-    <h1>Investment Tracker</h1>
+  <header class="site-header">
+    <div class="site-header__brand">
+      <a class="site-logo" href="index.html">Investment Tracker</a>
+      <span class="site-header__sep">/</span>
+      <span class="site-header__page">Home &amp; directory</span>
+    </div>
+    <nav class="site-header__nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="investor-rohit.html">Investors</a>
+      <a href="portfolio-growth.html">Portfolios</a>
+      <a href="asset-aapl.html">Assets</a>
+    </nav>
+    <div class="site-header__user">
+      <span class="site-header__name">Alex M.</span>
+      <span class="avatar" title="demo account">AM</span>
+    </div>
   </header>
 
-  <p>This site has links for investors, portfolios, assets, markets, returns, and risks.</p>
+  <div class="page-shell">
+    <aside class="sidebar" aria-label="Quick links">
+      <p class="sidebar__title">Jump to</p>
+      <ul class="sidebar__list">
+        <li><a href="#investors">Investors</a></li>
+        <li><a href="#portfolios">Portfolios</a></li>
+        <li><a href="#assets">Assets</a></li>
+        <li><a href="#markets">Markets</a></li>
+        <li><a href="#returns">Returns</a></li>
+        <li><a href="#risks">Risks</a></li>
+      </ul>
+      <p class="sidebar__sub">Tip: this is the same junk on every page so you don’t get lost. — prototype note</p>
+    </aside>
 
-  <!-- investors section -->
-  <h2>
-    <svg class="icon"><use href="/icons/finance.svg#icon-investor" /></svg>
-    Investors
-  </h2>
-  <ul>
-    <li><a href="investor-rohit.html">Rohit</a> - growth-focused, 15-year horizon</li>
-    <li><a href="investor-akhil.html">Akhil</a> - income-focused, near retirement</li>
-  </ul>
+    <div class="page-shell__main">
+      <main class="content content--home">
+        <p class="lede">This site has links for investors, portfolios, assets, markets, returns, and risks. Pick a card below or use the sidebar.</p>
 
-  <!-- portfolios section -->
-  <h2>
-    <svg class="icon"><use href="/icons/finance.svg#icon-portfolio" /></svg>
-    Portfolios
-  </h2>
-  <ul>
-    <li><a href="portfolio-growth.html">Aggressive Growth Portfolio</a></li>
-    <li><a href="portfolio-income.html">Conservative Income Portfolio</a></li>
-  </ul>
+        <div class="section-grid">
+          <section class="section-card" id="investors">
+            <h2>
+              <svg class="icon"><use href="/icons/finance.svg#icon-investor" /></svg>
+              Investors
+            </h2>
+            <ul>
+              <li><a href="investor-rohit.html">Rohit</a> — growth-focused, 15-year horizon</li>
+              <li><a href="investor-akhil.html">Akhil</a> — income-focused, near retirement</li>
+            </ul>
+          </section>
 
-  <!-- assets section -->
-  <h2>
-    <svg class="icon"><use href="/icons/finance.svg#icon-asset" /></svg>
-    Assets
-  </h2>
-  <ul>
-    <li><a href="asset-aapl.html">Apple Inc. (AAPL)</a> - Stock</li>
-    <li><a href="asset-etf.html">Vanguard S&amp;P 500 ETF (VOO)</a> - ETF</li>
-    <li><a href="asset-bond.html">US Treasury Bond (10-yr)</a> - Bond</li>
-  </ul>
+          <section class="section-card" id="portfolios">
+            <h2>
+              <svg class="icon"><use href="/icons/finance.svg#icon-portfolio" /></svg>
+              Portfolios
+            </h2>
+            <ul>
+              <li><a href="portfolio-growth.html">Aggressive Growth Portfolio</a></li>
+              <li><a href="portfolio-income.html">Conservative Income Portfolio</a></li>
+            </ul>
+          </section>
 
-  <!-- markets section -->
-  <h2>
-    <svg class="icon"><use href="/icons/finance.svg#icon-market" /></svg>
-    Markets
-  </h2>
-  <ul>
-    <li><a href="market-nasdaq.html">NASDAQ</a></li>
-    <li><a href="market-nyse.html">NYSE / Arca</a></li>
-  </ul>
+          <section class="section-card" id="assets">
+            <h2>
+              <svg class="icon"><use href="/icons/finance.svg#icon-asset" /></svg>
+              Assets
+            </h2>
+            <ul>
+              <li><a href="asset-aapl.html">Apple Inc. (AAPL)</a> — Stock</li>
+              <li><a href="asset-etf.html">Vanguard S&amp;P 500 ETF (VOO)</a> — ETF</li>
+              <li><a href="asset-bond.html">US Treasury Bond (10-yr)</a> — Bond</li>
+            </ul>
+          </section>
 
-  <!-- returns section -->
-  <h2>
-    <svg class="icon"><use href="/icons/finance.svg#icon-return" /></svg>
-    Returns
-  </h2>
-  <ul>
-    <li><a href="return-aapl.html">Return: Apple Inc. (AAPL) - 2023</a></li>
-    <li><a href="return-etf.html">Return: Vanguard S&amp;P 500 ETF (VOO) - 2023</a></li>
-  </ul>
+          <section class="section-card" id="markets">
+            <h2>
+              <svg class="icon"><use href="/icons/finance.svg#icon-market" /></svg>
+              Markets
+            </h2>
+            <ul>
+              <li><a href="market-nasdaq.html">NASDAQ</a></li>
+              <li><a href="market-nyse.html">NYSE / Arca</a></li>
+            </ul>
+          </section>
 
-  <!-- risks section -->
-  <h2>
-    <svg class="icon"><use href="/icons/finance.svg#icon-risk" /></svg>
-    Risks
-  </h2>
-  <ul>
-    <li><a href="risk-aapl.html">Risk: Apple Inc. (AAPL)</a></li>
-    <li><a href="risk-bond.html">Risk: US Treasury Bond</a></li>
-  </ul>
+          <section class="section-card" id="returns">
+            <h2>
+              <svg class="icon"><use href="/icons/finance.svg#icon-return" /></svg>
+              Returns
+            </h2>
+            <ul>
+              <li><a href="return-aapl.html">Return: Apple Inc. (AAPL) — 2023</a></li>
+              <li><a href="return-etf.html">Return: Vanguard S&amp;P 500 ETF (VOO) — 2023</a></li>
+            </ul>
+          </section>
+
+          <section class="section-card" id="risks">
+            <h2>
+              <svg class="icon"><use href="/icons/finance.svg#icon-risk" /></svg>
+              Risks
+            </h2>
+            <ul>
+              <li><a href="risk-aapl.html">Risk: Apple Inc. (AAPL)</a></li>
+              <li><a href="risk-bond.html">Risk: US Treasury Bond</a></li>
+            </ul>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
 
 </body>
 </html>
