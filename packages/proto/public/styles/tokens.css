@@ -19,3 +19,15 @@
   --layout-wide: 90rem;
   --sidebar-width: 13.5rem;
 }
+
+/* dark mode overrides */
+body.dark-mode {
+  --color-bg: #161616;
+  --color-text: #e8e8e8;
+  --color-card-bg: #242424;
+  --color-border: #3a3a3a;
+  --color-accent: #6fa8dc;
+  --color-link: #82b8e0;
+  --color-header-bg: #0d1b2a;
+  --color-header-text: #f4f4f4;
+}

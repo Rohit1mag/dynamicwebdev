@@ -69,6 +69,15 @@ body {
   gap: var(--space-2);
 }
 
+.darkmode-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  user-select: none;
+}
+
 .site-header__name {
   font-size: 0.9rem;
   white-space: nowrap;
