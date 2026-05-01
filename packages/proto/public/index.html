@@ -52,77 +52,74 @@
         <p class="lede">This site has links for investors, portfolios, assets, markets, returns, and risks. Pick a card below or use the sidebar.</p>
 
         <div class="section-grid">
-          <section class="section-card" id="investors">
-            <h2>
-              <svg class="icon"><use href="/icons/finance.svg#icon-investor" /></svg>
-              Investors
-            </h2>
+          <itr-home-section section-id="investors" icon-href="/icons/finance.svg#icon-investor">
+            <span slot="title">Investors</span>
             <ul>
               <li><a href="investor-rohit.html">Rohit</a> — growth-focused, 15-year horizon</li>
               <li><a href="investor-akhil.html">Akhil</a> — income-focused, near retirement</li>
             </ul>
-          </section>
+          </itr-home-section>
 
-          <section class="section-card" id="portfolios">
-            <h2>
-              <svg class="icon"><use href="/icons/finance.svg#icon-portfolio" /></svg>
-              Portfolios
-            </h2>
+          <itr-home-section section-id="portfolios" icon-href="/icons/finance.svg#icon-portfolio">
+            <span slot="title">Portfolios</span>
             <ul>
               <li><a href="portfolio-growth.html">Aggressive Growth Portfolio</a></li>
               <li><a href="portfolio-income.html">Conservative Income Portfolio</a></li>
             </ul>
-          </section>
+          </itr-home-section>
 
-          <section class="section-card" id="assets">
-            <h2>
-              <svg class="icon"><use href="/icons/finance.svg#icon-asset" /></svg>
-              Assets
-            </h2>
+          <itr-home-section section-id="assets" icon-href="/icons/finance.svg#icon-asset">
+            <span slot="title">Assets</span>
             <ul>
               <li><a href="asset-aapl.html">Apple Inc. (AAPL)</a> — Stock</li>
               <li><a href="asset-etf.html">Vanguard S&amp;P 500 ETF (VOO)</a> — ETF</li>
               <li><a href="asset-bond.html">US Treasury Bond (10-yr)</a> — Bond</li>
             </ul>
-          </section>
+          </itr-home-section>
 
-          <section class="section-card" id="markets">
-            <h2>
-              <svg class="icon"><use href="/icons/finance.svg#icon-market" /></svg>
-              Markets
-            </h2>
+          <itr-home-section section-id="markets" icon-href="/icons/finance.svg#icon-market">
+            <span slot="title">Markets</span>
             <ul>
               <li><a href="market-nasdaq.html">NASDAQ</a></li>
               <li><a href="market-nyse.html">NYSE / Arca</a></li>
             </ul>
-          </section>
+          </itr-home-section>
 
-          <section class="section-card" id="returns">
-            <h2>
-              <svg class="icon"><use href="/icons/finance.svg#icon-return" /></svg>
-              Returns
-            </h2>
+          <itr-home-section section-id="returns" icon-href="/icons/finance.svg#icon-return">
+            <span slot="title">Returns</span>
             <ul>
               <li><a href="return-aapl.html">Return: Apple Inc. (AAPL) — 2023</a></li>
               <li><a href="return-etf.html">Return: Vanguard S&amp;P 500 ETF (VOO) — 2023</a></li>
             </ul>
-          </section>
+          </itr-home-section>
 
-          <section class="section-card" id="risks">
-            <h2>
-              <svg class="icon"><use href="/icons/finance.svg#icon-risk" /></svg>
-              Risks
-            </h2>
+          <itr-home-section section-id="risks" icon-href="/icons/finance.svg#icon-risk">
+            <span slot="title">Risks</span>
             <ul>
               <li><a href="risk-aapl.html">Risk: Apple Inc. (AAPL)</a></li>
               <li><a href="risk-bond.html">Risk: US Treasury Bond</a></li>
             </ul>
-          </section>
+          </itr-home-section>
         </div>
       </main>
     </div>
   </div>
 
+  <script type="importmap">
+    {
+      "imports": {
+        "@unbndl/html": "https://unpkg.com/@unbndl/html@1.0.2/dist/html.js"
+      }
+    }
+  </script>
+  <script type="module">
+    import { define } from "@unbndl/html";
+    import { HomeSectionElement } from "/js/home-section.js";
+
+    define({
+      "itr-home-section": HomeSectionElement,
+    });
+  </script>
   <script type="module" src="/scripts/darkmode.js"></script>
 </body>
 </html>

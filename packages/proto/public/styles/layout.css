@@ -128,26 +128,6 @@ body {
   grid-column: 1 / -1;
 }
 
-.section-card {
-  grid-column: span 4;
-  background-color: var(--color-card-bg);
-  border: 1px solid var(--color-border);
-  padding: var(--space-3);
-  border-radius: 4px;
-}
-
-.section-card h2 {
-  margin-bottom: var(--space-2);
-}
-
-.section-card ul {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  padding-left: 1.25rem;
-  margin: 0;
-}
-
 .lede {
   grid-column: 1 / -1;
   max-width: 52ch;
@@ -233,10 +213,6 @@ body {
     --grid-columns: 8;
   }
 
-  .section-card {
-    grid-column: span 4;
-  }
-
   .page-shell {
     grid-template-columns: 1fr;
   }
@@ -249,10 +225,6 @@ body {
 @media (max-width: 720px) {
   :root {
     --grid-columns: 4;
-  }
-
-  .section-card {
-    grid-column: span 4;
   }
 
   body {
