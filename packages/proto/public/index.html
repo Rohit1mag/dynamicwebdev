@@ -51,56 +51,7 @@
       <main class="content content--home">
         <p class="lede">This site has links for investors, portfolios, assets, markets, returns, and risks. Pick a card below or use the sidebar.</p>
 
-        <div class="section-grid">
-          <itr-home-section section-id="investors" icon-href="/icons/finance.svg#icon-investor">
-            <span slot="title">Investors</span>
-            <ul>
-              <li><a href="investor-rohit.html">Rohit</a> — growth-focused, 15-year horizon</li>
-              <li><a href="investor-akhil.html">Akhil</a> — income-focused, near retirement</li>
-            </ul>
-          </itr-home-section>
-
-          <itr-home-section section-id="portfolios" icon-href="/icons/finance.svg#icon-portfolio">
-            <span slot="title">Portfolios</span>
-            <ul>
-              <li><a href="portfolio-growth.html">Aggressive Growth Portfolio</a></li>
-              <li><a href="portfolio-income.html">Conservative Income Portfolio</a></li>
-            </ul>
-          </itr-home-section>
-
-          <itr-home-section section-id="assets" icon-href="/icons/finance.svg#icon-asset">
-            <span slot="title">Assets</span>
-            <ul>
-              <li><a href="asset-aapl.html">Apple Inc. (AAPL)</a> — Stock</li>
-              <li><a href="asset-etf.html">Vanguard S&amp;P 500 ETF (VOO)</a> — ETF</li>
-              <li><a href="asset-bond.html">US Treasury Bond (10-yr)</a> — Bond</li>
-            </ul>
-          </itr-home-section>
-
-          <itr-home-section section-id="markets" icon-href="/icons/finance.svg#icon-market">
-            <span slot="title">Markets</span>
-            <ul>
-              <li><a href="market-nasdaq.html">NASDAQ</a></li>
-              <li><a href="market-nyse.html">NYSE / Arca</a></li>
-            </ul>
-          </itr-home-section>
-
-          <itr-home-section section-id="returns" icon-href="/icons/finance.svg#icon-return">
-            <span slot="title">Returns</span>
-            <ul>
-              <li><a href="return-aapl.html">Return: Apple Inc. (AAPL) — 2023</a></li>
-              <li><a href="return-etf.html">Return: Vanguard S&amp;P 500 ETF (VOO) — 2023</a></li>
-            </ul>
-          </itr-home-section>
-
-          <itr-home-section section-id="risks" icon-href="/icons/finance.svg#icon-risk">
-            <span slot="title">Risks</span>
-            <ul>
-              <li><a href="risk-aapl.html">Risk: Apple Inc. (AAPL)</a></li>
-              <li><a href="risk-bond.html">Risk: US Treasury Bond</a></li>
-            </ul>
-          </itr-home-section>
-        </div>
+        <itr-home-directory src="/data/sections.json"></itr-home-directory>
       </main>
     </div>
   </div>
@@ -115,9 +66,11 @@
   <script type="module">
     import { define } from "@unbndl/html";
     import { HomeSectionElement } from "/js/home-section.js";
+    import { HomeDirectoryElement } from "/js/home-directory.js";
 
     define({
       "itr-home-section": HomeSectionElement,
+      "itr-home-directory": HomeDirectoryElement,
     });
   </script>
   <script type="module" src="/scripts/darkmode.js"></script>

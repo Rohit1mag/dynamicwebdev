@@ -1,0 +1,59 @@
+{
+  "sections": [
+    {
+      "sectionId": "investors",
+      "iconHref": "/icons/finance.svg#icon-investor",
+      "title": "Investors",
+      "items": [
+        { "href": "investor-rohit.html", "text": "Rohit", "note": " — growth-focused, 15-year horizon" },
+        { "href": "investor-akhil.html", "text": "Akhil", "note": " — income-focused, near retirement" }
+      ]
+    },
+    {
+      "sectionId": "portfolios",
+      "iconHref": "/icons/finance.svg#icon-portfolio",
+      "title": "Portfolios",
+      "items": [
+        { "href": "portfolio-growth.html", "text": "Aggressive Growth Portfolio" },
+        { "href": "portfolio-income.html", "text": "Conservative Income Portfolio" }
+      ]
+    },
+    {
+      "sectionId": "assets",
+      "iconHref": "/icons/finance.svg#icon-asset",
+      "title": "Assets",
+      "items": [
+        { "href": "asset-aapl.html", "text": "Apple Inc. (AAPL)", "note": " — Stock" },
+        { "href": "asset-etf.html", "text": "Vanguard S&P 500 ETF (VOO)", "note": " — ETF" },
+        { "href": "asset-bond.html", "text": "US Treasury Bond (10-yr)", "note": " — Bond" }
+      ]
+    },
+    {
+      "sectionId": "markets",
+      "iconHref": "/icons/finance.svg#icon-market",
+      "title": "Markets",
+      "items": [
+        { "href": "market-nasdaq.html", "text": "NASDAQ" },
+        { "href": "market-nyse.html", "text": "NYSE / Arca" }
+      ]
+    },
+    {
+      "sectionId": "returns",
+      "iconHref": "/icons/finance.svg#icon-return",
+      "title": "Returns",
+      "items": [
+        { "href": "return-aapl.html", "text": "Return: Apple Inc. (AAPL) — 2023" },
+        { "href": "return-etf.html", "text": "Return: Vanguard S&P 500 ETF (VOO) — 2023" }
+      ]
+    },
+    {
+      "sectionId": "risks",
+      "iconHref": "/icons/finance.svg#icon-risk",
+      "title": "Risks",
+      "items": [
+        { "href": "risk-aapl.html", "text": "Risk: Apple Inc. (AAPL)" },
+        { "href": "risk-bond.html", "text": "Risk: US Treasury Bond" }
+      ]
+    }
+  ]
+}
