@@ -1,44 +1,46 @@
+import { Schema, model } from "mongoose";
 import { Investor } from "../models/index.ts";
 
-const investors: { [key: string]: Investor } = {
-  rohit: {
-    id: "rohit",
-    fullName: "Rohit Kota",
-    age: 38,
-    job: "Software Engineer",
-    riskTolerance: "high",
-    horizonYears: 15,
-    income: { amount: 145000, currency: "USD" },
-    netWorth: { amount: 520000, currency: "USD" },
-    memberSince: 2015,
-    blurb: "growth investor, long time horizon",
+const investorSchema = new Schema<Investor>(
+  {
+    id: { type: String, required: true, trim: true },
+    fullName: { type: String, required: true, trim: true },
+    age: { type: Number, required: true },
+    job: { type: String, required: true, trim: true },
+    riskTolerance: {
+      type: String,
+      enum: ["low", "medium", "high"],
+      required: true
+    },
+    horizonYears: { type: Number, required: true },
+    income: {
+      amount: { type: Number, required: true },
+      currency: { type: String, required: true }
+    },
+    netWorth: {
+      amount: { type: Number, required: true },
+      currency: { type: String, required: true }
+    },
+    memberSince: { type: Number, required: true },
+    blurb: { type: String },
     portfolios: [
-      { id: "growth", name: "Aggressive Growth Portfolio" }
+      {
+        id: { type: String, required: true },
+        name: { type: String, required: true }
+      }
     ]
   },
-  akhil: {
-    id: "akhil",
-    fullName: "Akhil Rao",
-    age: 61,
-    job: "Retired Accountant",
-    riskTolerance: "low",
-    horizonYears: 5,
-    income: { amount: 62000, currency: "USD" },
-    netWorth: { amount: 1200000, currency: "USD" },
-    memberSince: 2008,
-    blurb: "conservative, wants income, almost retired",
-    portfolios: [
-      { id: "income", name: "Conservative Income Portfolio" }
-    ]
-  }
-};
+  { collection: "investors" }
+);
 
-function get(id: string): Investor | undefined {
-  return investors[id];
+const InvestorModel = model<Investor>("Investor", investorSchema);
+
+function index(): Promise<Investor[]> {
+  return InvestorModel.find();
 }
 
-function index(): Array<Investor> {
-  return Object.values(investors);
+function get(id: string): Promise<Investor | undefined> {
+  return InvestorModel.findOne({ id }).then((doc) => doc ?? undefined);
 }
 
-export default { get, index };
+export default { index, get };

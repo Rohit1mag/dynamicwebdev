@@ -1,7 +1,6 @@
 import { html, css, shadow } from "@unbndl/html";
 import reset from "./styles/reset-in-shadow.js";
 
-// CS lab: wraps each category block on the home page (same pattern repeated 6 times before)
 export class HomeSectionElement extends HTMLElement {
   static template = html`
     <template>

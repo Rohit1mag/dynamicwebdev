@@ -20,7 +20,6 @@
   --sidebar-width: 13.5rem;
 }
 
-/* dark mode overrides */
 body.dark-mode {
   --color-bg: #161616;
   --color-text: #e8e8e8;
