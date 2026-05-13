@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 import { connect } from "./services/mongo.ts";
 import investors from "./routes/investors.ts";
+import auth, { authenticateUser } from "./routes/auth.ts";
 
 connect("investing");
 
@@ -11,7 +12,8 @@ const staticDir = process.env.STATIC || "public";
 app.use(express.static(staticDir));
 app.use(express.json());
 
-app.use("/api/investors", investors);
+app.use("/auth", auth);
+app.use("/api/investors", authenticateUser, investors);
 
 app.get("/hello", (_req: Request, res: Response) => {
   res.send("Hello, World");

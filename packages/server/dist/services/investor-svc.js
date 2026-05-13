@@ -34,4 +34,24 @@ function index() {
 function get(id) {
     return InvestorModel.findOne({ id }).then((doc) => doc ?? undefined);
 }
-export default { index, get };
+function create(json) {
+    const t = new InvestorModel(json);
+    return t.save();
+}
+function update(id, investor) {
+    return InvestorModel.findOneAndUpdate({ id: id }, investor, {
+        new: true
+    }).then((updated) => {
+        if (!updated)
+            throw `${id} not updated`;
+        else
+            return updated;
+    });
+}
+function remove(id) {
+    return InvestorModel.findOneAndDelete({ id: id }).then((deleted) => {
+        if (!deleted)
+            throw `${id} not deleted`;
+    });
+}
+export default { index, get, create, update, remove };
