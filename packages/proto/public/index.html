@@ -12,63 +12,51 @@
   <link rel="stylesheet" href="/styles/layout.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="site-header__brand">
-      <a class="site-logo" href="index.html">Investment Tracker</a>
-      <span class="site-header__sep">/</span>
-      <span class="site-header__page">Home &amp; directory</span>
-    </div>
-    <nav class="site-header__nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="investor-rohit.html">Investors</a>
-      <a href="portfolio-growth.html">Portfolios</a>
-      <a href="asset-aapl.html">Assets</a>
-    </nav>
-    <div class="site-header__user">
-      <label class="darkmode-toggle">
-        <input type="checkbox" autocomplete="off" />
-        Dark mode
-      </label>
-      <span class="site-header__name">Alex M.</span>
-      <span class="avatar" title="demo account">AM</span>
-    </div>
-  </header>
+  <auth-provider>
+    <itr-header></itr-header>
 
-  <div class="page-shell">
-    <aside class="sidebar" aria-label="Quick links">
-      <p class="sidebar__title">Jump to</p>
-      <ul class="sidebar__list">
-        <li><a href="#investors">Investors</a></li>
-        <li><a href="#portfolios">Portfolios</a></li>
-        <li><a href="#assets">Assets</a></li>
-        <li><a href="#markets">Markets</a></li>
-        <li><a href="#returns">Returns</a></li>
-        <li><a href="#risks">Risks</a></li>
-      </ul>
-    </aside>
+    <div class="page-shell">
+      <aside class="sidebar" aria-label="Quick links">
+        <p class="sidebar__title">Jump to</p>
+        <ul class="sidebar__list">
+          <li><a href="#investors">Investors</a></li>
+          <li><a href="#portfolios">Portfolios</a></li>
+          <li><a href="#assets">Assets</a></li>
+          <li><a href="#markets">Markets</a></li>
+          <li><a href="#returns">Returns</a></li>
+          <li><a href="#risks">Risks</a></li>
+        </ul>
+      </aside>
 
-    <div class="page-shell__main">
-      <main class="content content--home">
-        <p class="lede">This site has links for investors, portfolios, assets, markets, returns, and risks. Pick a card below or use the sidebar.</p>
+      <div class="page-shell__main">
+        <main class="content content--home">
+          <p class="lede">This site has links for investors, portfolios, assets, markets, returns, and risks. Pick a card below or use the sidebar.</p>
 
-        <itr-home-directory src="/data/sections.json"></itr-home-directory>
-      </main>
+          <itr-home-directory src="/data/sections.json"></itr-home-directory>
+        </main>
+      </div>
     </div>
-  </div>
+  </auth-provider>
 
   <script type="importmap">
     {
       "imports": {
-        "@unbndl/html": "https://unpkg.com/@unbndl/html@1.0.2/dist/html.js"
+        "@unbndl/auth": "https://unpkg.com/@unbndl/auth",
+        "@unbndl/html": "https://unpkg.com/@unbndl/html@1.0.2/dist/html.js",
+        "@unbndl/view": "https://unpkg.com/@unbndl/view"
       }
     }
   </script>
   <script type="module">
     import { define } from "@unbndl/html";
+    import { Auth } from "@unbndl/auth";
+    import { ItrHeaderElement } from "/js/header.js";
     import { HomeSectionElement } from "/js/home-section.js";
     import { HomeDirectoryElement } from "/js/home-directory.js";
 
     define({
+      "auth-provider": Auth.Provider,
+      "itr-header": ItrHeaderElement,
       "itr-home-section": HomeSectionElement,
       "itr-home-directory": HomeDirectoryElement,
     });

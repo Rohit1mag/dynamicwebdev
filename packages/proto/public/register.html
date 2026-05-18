@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Register – Investment Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/tokens.css" />
+    <link rel="stylesheet" href="/styles/page.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "@unbndl/auth": "https://unpkg.com/@unbndl/auth",
+          "@unbndl/html": "https://unpkg.com/@unbndl/html@1.0.2/dist/html.js",
+          "@unbndl/view": "https://unpkg.com/@unbndl/view"
+        }
+      }
+    </script>
+    <script type="module">
+      import { define } from "@unbndl/html";
+      import { Auth } from "@unbndl/auth";
+      import { LoginFormElement } from "/js/login-form.js";
+
+      define({
+        "auth-provider": Auth.Provider,
+        "login-form": LoginFormElement
+      });
+    </script>
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 2rem;
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        font-family: 'Inter', Arial, sans-serif;
+      }
+
+      h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.75rem;
+        color: var(--color-accent);
+      }
+
+      .card {
+        background: var(--color-card-bg);
+        border: 1px solid var(--color-border);
+        border-radius: 6px;
+        padding: 2rem;
+        width: 100%;
+        max-width: 380px;
+      }
+
+      login-form label {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      login-form input {
+        padding: 0.45rem 0.65rem;
+        border: 1px solid var(--color-border);
+        border-radius: 4px;
+        font-size: 1rem;
+        background: var(--color-bg);
+        color: var(--color-text);
+      }
+
+      p a {
+        color: var(--color-link);
+      }
+    </style>
+  </head>
+  <body class="page">
+    <auth-provider>
+      <h2>Create Account</h2>
+      <main class="card">
+        <login-form api="/auth/register">
+          <label>
+            <span>Username:</span>
+            <input name="username" autocomplete="off" />
+          </label>
+          <label>
+            <span>Password:</span>
+            <input type="password" name="password" />
+          </label>
+          <span slot="submit-label">Register</span>
+        </login-form>
+      </main>
+      <p>
+        Already have an account? <a href="/login.html">Sign in</a>
+      </p>
+    </auth-provider>
+  </body>
+</html>
